@@ -1,0 +1,248 @@
+/* Define color and font variables for easy maintenance */
+:root {
+  --primary-color: #007bff;
+  --hover-primary-color: #0056b3;
+  --background-dark: #333;
+  --text-light: #fff; /* Đổi màu chữ sang trắng */
+  --text-dark: #333;
+  --font-primary: Arial, sans-serif;
+}
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styles */
+body {
+  font-family: var(--font-primary);
+  background-size: cover;
+  background-image: linear-gradient(
+    45deg,
+    rgb(65, 88, 208) 0%,
+    rgb(200, 80, 192) 50%,
+    rgb(255, 204, 112) 100%
+  );
+  color: var(--text-light); /* Sử dụng màu chữ trắng cho toàn bộ trang */
+}
+
+/* Header styles */
+header {
+  background-color: #673ab7;
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Navigation styles */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: var(--text-light); /* Sử dụng màu chữ trắng */
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+/* Section styles */
+section {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Button styles */
+.button-container {
+  text-align: center;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: var(--hover-primary-color);
+}
+
+/* Footer styles */
+footer {
+  background-color: #673ab7;
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Login and Register Container */
+.login-container {
+  background-color: transparent;
+  padding: 30px;
+  width: 350px;
+  margin: auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.input-container {
+  margin-bottom: 15px;
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+  box-shadow: 2px solid black;
+}
+
+.input-container input {
+  width: 100%;
+  border: 2px solid black;
+  padding: 12px 20px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-container input:focus {
+  border-color: var(--primary-color); /* Sử dụng màu chính để làm nổi bật */
+}
+
+.checkbox-container {
+  margin: 10px 0;
+}
+
+.login-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.login-message {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Additional styles for login and register forms */
+.auth-form {
+  text-align: center;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 40vh;
+  height: 40vh;
+  top: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+}
+.auth-form input {
+  width: 40vh;
+  height: 6vh;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.auth-form h2 {
+  margin-bottom: 20px;
+}
+
+.auth-switch {
+  margin-top: 20px;
+}
+
+.auth-switch a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+/* Initially hide the login form and show the register form */
+#loginForm {
+  display: none;
+}
+
+#registerForm {
+  display: block;
+}
+
+/* Logo styling */
+.logo {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  height: auto;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+  .login-container {
+    width: 80%;
+  }
+}
+.alert-box {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f44336;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  display: none;
+  z-index: 999;
+}
+
+.alert-message {
+  margin-right: 10px;
+}
+
+.close-alert-btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
